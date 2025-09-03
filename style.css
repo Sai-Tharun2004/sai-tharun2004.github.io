@@ -109,6 +109,14 @@ header {
 /* Sections */
 section {
   padding: 40px 20px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 section h2 {
