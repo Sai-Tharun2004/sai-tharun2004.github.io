@@ -149,3 +149,46 @@ footer {
 .dark-mode section h2 {
   color: #00d4ff;
 }
+
+/* Typing Effect */
+#typing-text {
+  font-size: 18px;
+  border-right: 2px solid #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  width: fit-content;
+  animation: blinkCursor 0.7s infinite;
+  margin-top: 5px;
+}
+
+.dark-mode #typing-text {
+  border-right: 2px solid #fff;
+}
+
+@keyframes blinkCursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Back to Top Button */
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  display: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: background 0.3s;
+  z-index: 1000;
+}
+
+#backToTop:hover {
+  background: #0056b3;
+}
