@@ -1,107 +1,151 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sai Tharun Darisi | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <!-- Navbar -->
-  <nav>
-    <div class="logo">
-      <img src="profile.jpg" alt="Logo" class="nav-pic">
-      <span>Sai Tharun</span>
-    </div>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#achievements">Achievements</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <button id="darkModeToggle">🌙</button>
-  </nav>
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <!-- Hero Section -->
-  <header>
-    <div class="hero-container">
-      <img src="profile.jpg" alt="Sai Tharun Darisi" class="profile-pic">
-      <div class="hero-text">
-        <h1 class="fade-in">Sai Tharun Darisi</h1>
-        <p class="fade-in">Aspiring Data Scientist | Web Developer | Problem Solver</p>
-      </div>
-    </div>
-  </header>
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f4f4f4;
+  color: #333;
+  transition: background 0.3s, color 0.3s;
+}
 
-  <!-- About -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      To secure a position as a trainee engineer where I can apply theoretical knowledge in real-world scenarios,
-      develop new skills, and contribute effectively to the organization's goals.
-    </p>
-  </section>
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-  <!-- Skills -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Programming: Java, C, Python (Basics)</li>
-      <li>Web Development: HTML, CSS, JavaScript</li>
-      <li>Database: DBMS</li>
-    </ul>
-  </section>
+nav .logo {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+}
 
-  <!-- Experience -->
-  <section id="experience">
-    <h2>Experience</h2>
-    <p><strong>Agratas Academy Pvt Ltd</strong> (Sep 2024 – Nov 2024)</p>
-    <ul>
-      <li>Completed industrial training in Data Science with mentor guidance</li>
-      <li>Worked on data preprocessing, statistical analysis, and predictive modeling</li>
-      <li>Developed mini-projects on real-world datasets</li>
-      <li>Gained exposure to teamwork, agile methodology, and problem-solving</li>
-    </ul>
-  </section>
+nav .nav-pic {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
 
-  <!-- Education -->
-  <section id="education">
-    <h2>Education</h2>
-    <ul>
-      <li><strong>Sri Venkateswara College of Engineering</strong>, B.Tech CSE (Data Science), 2022–2026, CGPA: 8.94</li>
-      <li><strong>Akshara Junior College</strong>, Intermediate MPC, 94%</li>
-      <li><strong>Sri Chaitanya High School</strong>, CGPA: 10</li>
-    </ul>
-  </section>
+nav ul {
+  display: flex;
+  list-style: none;
+}
 
-  <!-- Achievements -->
-  <section id="achievements">
-    <h2>Achievements</h2>
-    <ul>
-      <li>Google Cloud Computing Foundations – NPTEL</li>
-      <li>Data Analytics with Python – NPTEL</li>
-      <li>Introduction to Java Programming – edX</li>
-    </ul>
-  </section>
+nav ul li {
+  margin: 0 10px;
+}
 
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:saitharundarisi123@gmail.com">saitharundarisi123@gmail.com</a></p>
-    <p>Phone: <a href="tel:+917075713503">+91 70757 13503</a></p>
-    <p>Location: Pamur, Prakasam District, Andhra Pradesh</p>
-    <p>
-      <a href="https://www.linkedin.com/in/sai-tharun-630274281" target="_blank">LinkedIn</a> |
-      <a href="https://github.com/Sai-Tharun2004" target="_blank">GitHub</a>
-    </p>
-  </section>
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
 
-  <footer>
-    <p>© 2025 Sai Tharun Darisi</p>
-  </footer>
+nav ul li a:hover {
+  color: #007bff;
+}
 
-  <script src="script.js"></script>
-</body>
-</html>
+#darkModeToggle {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Hero */
+header {
+  background: linear-gradient(to right, #007bff, #00d4ff);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 4px solid white;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.1);
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Sections */
+section {
+  padding: 40px 20px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+section h2 {
+  margin-bottom: 15px;
+  color: #007bff;
+}
+
+ul {
+  margin-left: 20px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #222;
+  color: white;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background: #121212;
+  color: white;
+}
+
+.dark-mode nav {
+  background: #111;
+}
+
+.dark-mode section h2 {
+  color: #00d4ff;
+}
